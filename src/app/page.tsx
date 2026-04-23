@@ -1,6 +1,5 @@
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
-import ObraCard from '@/components/ObraCard'
 import Link from 'next/link'
 
 export default function Home() {
@@ -32,7 +31,7 @@ export default function Home() {
                   Começar Jornada
                 </Link>
                 <Link 
-                  href="/sobre" 
+                  href="#artista" 
                   className="inline-block border border-white px-8 py-3 font-bold hover:bg-white hover:text-black transition"
                 >
                   Sobre o Artista
@@ -42,6 +41,7 @@ export default function Home() {
           </div>
         </section>
 
+        
         {/* Primeira Época - A Descoberta */}
         <section id="primeira-epoca" className="relative min-h-screen flex items-center justify-center bg-gradient-to-b from-silver-50 to-white">
           <div className="container mx-auto px-4 py-20">
@@ -197,58 +197,78 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Seção de Obras - Convite à Descoberta */}
-        <section className="relative py-20 bg-gradient-to-b from-black to-silver-900 text-white">
+        
+        {/* Seção do Artista */}
+        <section id="artista" className="bg-white py-20">
           <div className="container mx-auto px-4">
-            <div className="text-center mb-16">
-              <h2 className="font-old-english text-4xl md:text-5xl mb-6">
-                As Obras
+            <div className="max-w-4xl mx-auto">
+              <h2 className="font-old-english text-4xl md:text-5xl text-center mb-16 text-black">
+                O Artista
               </h2>
-              <p className="font-typewriter text-xl text-silver-300 max-w-3xl mx-auto">
-                Cada peça é um fragmento das três épocas, materializada em prata e pronta 
-                para dialogar com sua alma. Descubra a obra que ressoa com sua jornada.
-              </p>
-            </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-              <ObraCard
-                title="Época da Descoberta"
-                description="Obras Primordiais"
-                icon="🌅"
-                gradient="bg-gradient-to-br from-silver-400 to-silver-600"
-                iconColor="text-black"
-                textColor="text-black"
-              />
               
-              <ObraCard
-                title="Época da Transformação"
-                description="Obras Metamórficas"
-                icon="🔄"
-                gradient="bg-gradient-to-br from-silver-500 to-silver-700"
-                iconColor="text-white"
-                textColor="text-white"
-              />
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-16">
+                <div>
+                  <h3 className="font-bold text-2xl mb-6">A Jornada Criativa</h3>
+                  <div className="font-typewriter text-silver-600 space-y-4">
+                    <p>
+                      Era de Prata não é apenas um nome, mas a essência de uma jornada artística 
+                      que transcende o tempo e o espaço. Nascida da necessidade de expressar 
+                      o inexprimível, esta obra coletiva representa a busca constante pela 
+                      verdade através da arte abstrata.
+                    </p>
+                    <p>
+                      O artista por trás de Era de Prata encontrou na prata não apenas um material, 
+                      mas uma metáfora para a existência humana - reflexiva, mutável, etérea 
+                      e, ao mesmo tempo, concreta. Cada peça é um fragmento desta compreensão, 
+                      um convite à contemplação profunda.
+                    </p>
+                  </div>
+                </div>
+                <div className="bg-silver-100 p-8 rounded-lg">
+                  <div className="text-center">
+                    <div className="text-6xl mb-4">🎨</div>
+                    <p className="text-black font-bold">A Expressão Pura</p>
+                  </div>
+                </div>
+              </div>
               
-              <ObraCard
-                title="Época da Eternidade"
-                description="Obras Transcendentes"
-                icon="∞"
-                gradient="bg-gradient-to-br from-silver-700 to-black"
-                iconColor="text-white"
-                textColor="text-white"
-              />
-            </div>
-            
-            <div className="text-center">
-              <Link 
-                href="/produtos" 
-                className="inline-block bg-white text-black px-8 py-4 font-bold hover:bg-silver-200 transition text-lg"
-              >
-                Explorar Todas as Obras
-              </Link>
-              <p className="font-typewriter text-silver-400 mt-4 italic">
-                Cada obra espera por seu observador
-              </p>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+                <div className="bg-silver-50 p-6 rounded-lg text-center">
+                  <h3 className="font-bold text-xl mb-3">Abstração como Linguagem</h3>
+                  <p className="font-typewriter text-silver-600 text-sm">
+                    A arte abstrata permite expressar emoções e conceitos 
+                    que transcendem as limitações da representação literal.
+                  </p>
+                </div>
+                <div className="bg-silver-50 p-6 rounded-lg text-center">
+                  <h3 className="font-bold text-xl mb-3">Prata como Metáfora</h3>
+                  <p className="font-typewriter text-silver-600 text-sm">
+                    O metal prateado simboliza reflexão, pureza e a capacidade 
+                    de revelar verdades ocultas através da luz e sombra.
+                  </p>
+                </div>
+                <div className="bg-silver-50 p-6 rounded-lg text-center">
+                  <h3 className="font-bold text-xl mb-3">Tempo como Co-criador</h3>
+                  <p className="font-typewriter text-silver-600 text-sm">
+                    Cada obra evolui com o tempo, adquirindo novas camadas 
+                    de significado conforme o olhar do observador.
+                  </p>
+                </div>
+              </div>
+              
+              <div className="bg-black text-white p-8 rounded-lg mb-16">
+                <h3 className="font-bold text-2xl mb-6 text-center">Filosofia Artística</h3>
+                <div className="font-typewriter text-silver-300 space-y-4 text-center">
+                  <p>
+                    "Não busque significados em minhas obras. Encontre-se nelas. 
+                    A verdadeira arte não está no que eu criei, mas no que você 
+                    descobre ao contemplar."
+                  </p>
+                  <p className="italic text-silver-400">
+                    A arte está na interação entre obra, artista e observador
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </section>

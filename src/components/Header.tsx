@@ -16,9 +16,8 @@ export default function Header() {
           
           <div className="hidden md:flex space-x-8">
             <Link href="/" className="hover:text-silver-400 transition">Início</Link>
-            <Link href="/#primeira-epoca" className="hover:text-silver-400 transition">As Três Épocas</Link>
-            <Link href="/produtos" className="hover:text-silver-400 transition">Obras</Link>
-            <Link href="/sobre" className="hover:text-silver-400 transition">O Artista</Link>
+            <Link href="/a-era-de-prata" className="hover:text-silver-400 transition">A Era de Prata</Link>
+            <Link href="/produtos" className="hover:text-silver-400 transition">Merch</Link>
             <Link href="/contato" className="hover:text-silver-400 transition">Contato</Link>
             <Link href="/admin" className="hover:text-silver-400 transition">Admin</Link>
           </div>
@@ -38,9 +37,8 @@ export default function Header() {
         {isMenuOpen && (
           <div className="md:hidden mt-4 space-y-2">
             <Link href="/" className="block py-2 hover:text-silver-400 transition">Início</Link>
-            <Link href="/#primeira-epoca" className="block py-2 hover:text-silver-400 transition">As Três Épocas</Link>
-            <Link href="/produtos" className="block py-2 hover:text-silver-400 transition">Obras</Link>
-            <Link href="/sobre" className="block py-2 hover:text-silver-400 transition">O Artista</Link>
+            <Link href="/a-era-de-prata" className="block py-2 hover:text-silver-400 transition">A Era de Prata</Link>
+            <Link href="/produtos" className="block py-2 hover:text-silver-400 transition">Merch</Link>
             <Link href="/contato" className="block py-2 hover:text-silver-400 transition">Contato</Link>
             <Link href="/admin" className="block py-2 hover:text-silver-400 transition">Admin</Link>
           </div>
