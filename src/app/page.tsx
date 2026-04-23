@@ -61,6 +61,13 @@ export default function Home() {
           </div>
         </section>
 
+        {/* Texto Adicional */}
+        <div className="relative z-20 text-center text-white px-4">
+          <p className="font-typewriter text-4xl mb-4">
+            Você não deveria estar aqui ainda...
+          </p>
+        </div>
+
         {/* Contador Regressivo */}
         <CountdownTimer />
 
@@ -81,13 +88,13 @@ export default function Home() {
                 href="/produtos"
                 className="bg-silver-600 text-white px-6 py-3 font-bold hover:bg-silver-700 transition"
               >
-                Merch
+                Explorar Merch
               </Link>
               <Link 
                 href="/contato"
                 className="border border-white px-6 py-3 font-bold hover:bg-white hover:text-black transition"
               >
-                Contato
+                Conectar-se
               </Link>
             </div>
           </div>

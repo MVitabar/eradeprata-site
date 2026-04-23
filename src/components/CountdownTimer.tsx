@@ -11,7 +11,7 @@ export default function CountdownTimer() {
   })
 
   useEffect(() => {
-    const targetDate = new Date('2026-11-01T00:00:00-03:00') // 1º de novembro de 2026, meia-noite, horário de Brasília
+    const targetDate = new Date('2026-11-23T00:00:00-03:00') // 23 de novembro de 2026, meia-noite, horário de Brasília
 
     const updateTimer = () => {
       const now = new Date()
@@ -42,12 +42,7 @@ export default function CountdownTimer() {
   return (
     <div className="bg-red-600 py-8">
       <div className="container mx-auto px-4 text-center">
-        <h2 className="font-old-english text-2xl md:text-3xl text-white mb-6">
-          Contagem Regressiva
-        </h2>
-        <p className="text-white mb-8 font-typewriter">
-          1º de Novembro de 2026
-        </p>
+        
         <div className="grid grid-cols-4 gap-4 max-w-2xl mx-auto md:max-w-4xl md:gap-6">
           <div className="bg-black p-4 md:p-6 rounded-lg md:rounded-xl">
             <div className="font-typewriter text-white text-3xl md:text-5xl font-bold">

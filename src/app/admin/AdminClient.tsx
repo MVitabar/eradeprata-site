@@ -15,7 +15,8 @@ export default function AdminClient() {
   const handleLogin = (e: React.FormEvent) => {
     e.preventDefault()
     if (login(username, password)) {
-      router.push('/admin/produtos')
+      alert('Login successful! Redirecting to admin dashboard...')
+      // Permanecer en la misma página de admin para mostrar el dashboard
     } else {
       alert('Credenciais inválidas')
     }
@@ -46,25 +47,25 @@ export default function AdminClient() {
             
             <div className="text-center text-white mb-8">
               <p className="text-xl">Bem-vindo!</p>
-              <div className="space-x-4">
-                <Link 
-                  href="/admin/produtos"
-                  className="bg-white text-black px-4 py-2 rounded hover:bg-silver-200 transition"
+              <div className="flex justify-center gap-4 flex-wrap">
+                <button 
+                  onClick={() => router.push('/admin/produtos')}
+                  className="bg-white text-black px-4 py-2 rounded hover:bg-silver-200 transition font-bold"
                 >
                   Produtos
-                </Link>
-                <Link 
-                  href="/admin/categorias"
-                  className="bg-white text-black px-4 py-2 rounded hover:bg-silver-200 transition"
+                </button>
+                <button 
+                  onClick={() => router.push('/admin/categorias')}
+                  className="bg-white text-black px-4 py-2 rounded hover:bg-silver-200 transition font-bold"
                 >
                   Categorias
-                </Link>
-                <Link 
-                  href="/contato"
-                  className="bg-white text-black px-4 py-2 rounded hover:bg-silver-200 transition"
+                </button>
+                <button 
+                  onClick={() => router.push('/contato')}
+                  className="bg-white text-black px-4 py-2 rounded hover:bg-silver-200 transition font-bold"
                 >
                   Contato
-                </Link>
+                </button>
               </div>
             </div>
           </div>
