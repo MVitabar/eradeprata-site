@@ -1,65 +1,297 @@
-import Image from "next/image";
+import Header from '@/components/Header'
+import Footer from '@/components/Footer'
+import ObraCard from '@/components/ObraCard'
+import Link from 'next/link'
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
+    <div className="min-h-screen bg-white">
+      <Header />
+      
+      <main>
+        {/* Hero Section - Introdução ao Conceito */}
+        <section className="relative min-h-screen flex items-center justify-center bg-black text-white">
+          <div className="absolute inset-0 bg-gradient-to-br from-black via-silver-900 to-black opacity-80"></div>
+          <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
+            <h1 className="font-old-english text-6xl md:text-8xl font-bold mb-6 tracking-wider">
+              Era de Prata
+            </h1>
+            <p className="font-typewriter text-lg md:text-xl mb-8 text-silver-300 leading-relaxed">
+              Uma jornada artística através do tempo, onde cada fragmento conta uma história 
+              e cada sombra revela uma verdade oculta. Três momentos, uma essência.
+            </p>
+            <div className="space-y-4">
+              <p className="text-silver-400 italic">
+                "Na prata, encontramos o reflexo da alma em sua forma mais pura"
+              </p>
+              <div className="space-x-4">
+                <Link 
+                  href="#primeira-epoca" 
+                  className="inline-block bg-white text-black px-8 py-3 font-bold hover:bg-silver-200 transition"
+                >
+                  Começar Jornada
+                </Link>
+                <Link 
+                  href="/sobre" 
+                  className="inline-block border border-white px-8 py-3 font-bold hover:bg-white hover:text-black transition"
+                >
+                  Sobre o Artista
+                </Link>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Primeira Época - A Descoberta */}
+        <section id="primeira-epoca" className="relative min-h-screen flex items-center justify-center bg-gradient-to-b from-silver-50 to-white">
+          <div className="container mx-auto px-4 py-20">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+              <div className="order-2 lg:order-1">
+                <h2 className="font-old-english text-4xl md:text-5xl font-bold mb-8 text-black">
+                  Primeira Época
+                  <span className="block text-2xl md:text-3xl text-silver-600 mt-2">A Descoberta</span>
+                </h2>
+                <div className="space-y-6 font-typewriter text-silver-700 leading-relaxed">
+                  <p>
+                    Nos primórdios da criação, quando o tempo ainda não tinha forma e as cores 
+                    dançavam no vácuo, surgiu a primeira manifestação. Um brilho fraco, quase 
+                    imperceptível, que continha em si a promessa de todo o universo artístico 
+                    que viria a existir.
+                  </p>
+                  <p>
+                    Era o momento do reconhecimento, quando o artista compreendeu que cada 
+                    traço, cada sombra, cada reflexo na superfície prateada continha uma 
+                    história esperando para ser contada. A descoberta não foi apenas visual, 
+                    mas existencial - a compreensão de que a arte transcende o material.
+                  </p>
+                  <p className="italic text-silver-600">
+                    "Na primeira época, aprendi que a verdade não está na superfície, 
+                    mas na forma como a luz dança sobre ela."
+                  </p>
+                </div>
+                <div className="mt-8">
+                  <Link 
+                    href="#segunda-epoca"
+                    className="inline-block bg-black text-white px-6 py-3 font-bold hover:bg-silver-800 transition"
+                  >
+                    Continuar Jornada →
+                  </Link>
+                </div>
+              </div>
+              <div className="order-1 lg:order-2">
+                <div className="relative">
+                  <div className="w-full h-96 bg-gradient-to-br from-silver-200 to-silver-400 rounded-lg flex items-center justify-center">
+                    <div className="text-center">
+                      <div className="text-8xl mb-4">🌅</div>
+                      <p className="text-black font-bold">O Amanhecer da Consciência</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Segunda Época - A Transformação */}
+        <section id="segunda-epoca" className="relative min-h-screen flex items-center justify-center bg-gradient-to-b from-white to-silver-100">
+          <div className="container mx-auto px-4 py-20">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+              <div>
+                <h2 className="font-old-english text-4xl md:text-5xl font-bold mb-8 text-black">
+                  Segunda Época
+                  <span className="block text-2xl md:text-3xl text-silver-600 mt-2">A Transformação</span>
+                </h2>
+                <div className="space-y-6 font-typewriter text-silver-700 leading-relaxed">
+                  <p>
+                    Com a descoberta veio a metamorfose. O artista, agora possuidor do conhecimento 
+                    primordial, começou a transformar o bruto em refinado, o caos em ordem, 
+                    o silêncio em sinfonia. Cada pincelada era um ato de rebelião contra o vazio.
+                  </p>
+                  <p>
+                    Na segunda época, a prata deixou de ser apenas material e tornou-se 
+                    metáfora. Reflexo da alma humana em sua constante mutação, a obra 
+                    adquiriu profundidade, camadas de significado que revelavam-se 
+                    gradualmente àqueles que ousavam olhar além do óbvio.
+                  </p>
+                  <p className="italic text-silver-600">
+                    "Transformar não é mudar, é revelar o que sempre esteve lá, 
+                    esperando o momento certo para emergir."
+                  </p>
+                </div>
+                <div className="mt-8">
+                  <Link 
+                    href="#terceira-epoca"
+                    className="inline-block bg-black text-white px-6 py-3 font-bold hover:bg-silver-800 transition"
+                  >
+                    Continuar Jornada →
+                  </Link>
+                </div>
+              </div>
+              <div>
+                <div className="relative">
+                  <div className="w-full h-96 bg-gradient-to-br from-silver-300 to-silver-600 rounded-lg flex items-center justify-center">
+                    <div className="text-center">
+                      <div className="text-8xl mb-4">🔄</div>
+                      <p className="text-white font-bold">A Alquimia da Existência</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Terceira Época - A Eternidade */}
+        <section id="terceira-epoca" className="relative min-h-screen flex items-center justify-center bg-gradient-to-b from-silver-100 to-black text-white">
+          <div className="container mx-auto px-4 py-20">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+              <div className="order-2 lg:order-1">
+                <h2 className="font-old-english text-4xl md:text-5xl font-bold mb-8 text-white">
+                  Terceira Época
+                  <span className="block text-2xl md:text-3xl text-silver-300 mt-2">A Eternidade</span>
+                </h2>
+                <div className="space-y-6 font-typewriter text-silver-300 leading-relaxed">
+                  <p>
+                    Na culminação da jornada artística, o tempo dissolve-se e a obra transcende 
+                    seu criador. A terceira época não é um fim, mas um começo - o momento 
+                    em que a arte ad vida própria e passa a existir independentemente 
+                    de sua origem.
+                  </p>
+                  <p>
+                    A prata, agora polida por incontáveis camadas de significado, 
+                    reflete não apenas a luz, mas a eternidade. Cada traço contém 
+                    a soma das épocas anteriores, cada sombra guarda os segredos 
+                    revelados e os mistérios ainda por desvendar.
+                  </p>
+                  <p className="italic text-silver-400">
+                    "Na eternidade da arte, descobrimos que a verdadeira imortalidade 
+                    está na capacidade de tocar infinitas almas através do tempo."
+                  </p>
+                </div>
+                <div className="mt-8 space-x-4">
+                  <Link 
+                    href="/produtos" 
+                    className="inline-block bg-white text-black px-6 py-3 font-bold hover:bg-silver-200 transition"
+                  >
+                    Explorar a Obra
+                  </Link>
+                  <Link 
+                    href="/contato"
+                    className="inline-block border border-white px-6 py-3 font-bold hover:bg-white hover:text-black transition"
+                  >
+                    Conectar com o Artista
+                  </Link>
+                </div>
+              </div>
+              <div className="order-1 lg:order-2">
+                <div className="relative">
+                  <div className="w-full h-96 bg-gradient-to-br from-silver-600 to-black rounded-lg flex items-center justify-center">
+                    <div className="text-center">
+                      <div className="text-8xl mb-4">∞</div>
+                      <p className="text-white font-bold">A Transcendência</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Seção de Obras - Convite à Descoberta */}
+        <section className="relative py-20 bg-gradient-to-b from-black to-silver-900 text-white">
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-16">
+              <h2 className="font-old-english text-4xl md:text-5xl mb-6">
+                As Obras
+              </h2>
+              <p className="font-typewriter text-xl text-silver-300 max-w-3xl mx-auto">
+                Cada peça é um fragmento das três épocas, materializada em prata e pronta 
+                para dialogar com sua alma. Descubra a obra que ressoa com sua jornada.
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+              <ObraCard
+                title="Época da Descoberta"
+                description="Obras Primordiais"
+                icon="🌅"
+                gradient="bg-gradient-to-br from-silver-400 to-silver-600"
+                iconColor="text-black"
+                textColor="text-black"
+              />
+              
+              <ObraCard
+                title="Época da Transformação"
+                description="Obras Metamórficas"
+                icon="🔄"
+                gradient="bg-gradient-to-br from-silver-500 to-silver-700"
+                iconColor="text-white"
+                textColor="text-white"
+              />
+              
+              <ObraCard
+                title="Época da Eternidade"
+                description="Obras Transcendentes"
+                icon="∞"
+                gradient="bg-gradient-to-br from-silver-700 to-black"
+                iconColor="text-white"
+                textColor="text-white"
+              />
+            </div>
+            
+            <div className="text-center">
+              <Link 
+                href="/produtos" 
+                className="inline-block bg-white text-black px-8 py-4 font-bold hover:bg-silver-200 transition text-lg"
+              >
+                Explorar Todas as Obras
+              </Link>
+              <p className="font-typewriter text-silver-400 mt-4 italic">
+                Cada obra espera por seu observador
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* Seção de Conexão */}
+        <section className="bg-black text-white py-20">
+          <div className="container mx-auto text-center px-4">
+            <h2 className="font-old-english text-4xl mb-8">
+              A Jornada Continua
+            </h2>
+            <p className="font-typewriter text-xl mb-12 text-silver-300 max-w-3xl mx-auto">
+              Era de Prata não é apenas uma coleção de obras, mas um convite à reflexão. 
+              Cada peça carrega consigo as três épocas, transformando-se conforme o olhar 
+              de quem a contempla. A arte está na interação, na descoberta, na transformação.
+            </p>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+              <div className="text-center">
+                <div className="text-4xl mb-4">👁️</div>
+                <h3 className="font-bold text-xl mb-2">Contemplar</h3>
+                <p className="font-typewriter text-silver-400 text-sm">
+                  Permita-se ver além do óbvio
+                </p>
+              </div>
+              <div className="text-center">
+                <div className="text-4xl mb-4">🤔</div>
+                <h3 className="font-bold text-xl mb-2">Refletir</h3>
+                <p className="font-typewriter text-silver-400 text-sm">
+                  Encontre seu próprio significado
+                </p>
+              </div>
+              <div className="text-center">
+                <div className="text-4xl mb-4">✨</div>
+                <h3 className="font-bold text-xl mb-2">Transformar</h3>
+                <p className="font-typewriter text-silver-400 text-sm">
+                  Deixe a arte transformar você
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
       </main>
+      
+      <Footer />
     </div>
-  );
+  )
 }
