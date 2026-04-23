@@ -127,7 +127,15 @@ export default function EditProduct() {
             </div>
           
             <ProductForm
-              initialData={product}
+              initialData={product ? {
+                name: product.name,
+                description: product.description || '',
+                price: product.price.toString(),
+                category_id: product.category_id?.toString() || '',
+                stock: product.stock.toString(),
+                is_active: product.is_active,
+                image_url: product.image_url || ''
+              } : undefined}
               categories={categories}
               onSubmit={handleSubmit}
               loading={loading}

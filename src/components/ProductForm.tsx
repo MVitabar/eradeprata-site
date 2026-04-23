@@ -7,12 +7,12 @@ import Link from 'next/link'
 interface ProductFormProps {
   initialData?: {
     name: string
-    description: string
+    description?: string
     price: string
-    category_id: string
+    category_id?: string
     stock: string
     is_active: boolean
-    image_url: string
+    image_url?: string
   }
   categories: Category[]
   onSubmit: (data: any) => Promise<void>
@@ -63,13 +63,11 @@ export default function ProductForm({
     if (file) {
       // Validar tipo de arquivo
       if (!file.type.startsWith('image/')) {
-        setError('Por favor, selecione apenas arquivos de imagem (JPG, PNG, GIF, WebP)')
         return // O pai irá tratar o erro
       }
 
       // Validar tamanho (máximo 5MB)
       if (file.size > 5 * 1024 * 1024) {
-        setError('A imagem deve ter no máximo 5MB')
         return // O pai irá tratar o erro
       }
 
