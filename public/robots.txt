@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://eradeprata.com/sitemap.xml
+
+# Bloquear áreas admin
+Disallow: /admin
+Disallow: /admin/*
