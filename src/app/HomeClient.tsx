@@ -33,7 +33,7 @@ export default function HomeClient() {
   return (
     <>
       {/* Três Imagens em Vertical */}
-      <section className="relative min-h-screen flex flex-col justify-center bg-black p-4">
+      <section className="relative py-8 md:py-16 flex flex-col justify-center bg-black px-4">
         <div className="w-full max-w-4xl mx-auto space-y-4">
           {/* Primeira Imagem - TRINIDAD */}
           <div className="relative">
@@ -65,9 +65,18 @@ export default function HomeClient() {
       </section>
 
       {/* Texto Adicional */}
-      <div className="relative z-20 text-center text-white px-4">
-        <p className="font-typewriter text-4xl mb-4">
-          Você não deveria estar aqui ainda...
+      <div className="relative z-20 text-center text-white px-4 pt-4 md:pt-8">
+        <p className="font-old-english text-4xl md:text-3xl mb-4">
+          Mais do que uma mixtape.
+          <br />
+          Mais do que trap.
+          <br />
+          Uma era.
+          <br />
+          A era de prata.
+        </p>
+        <p className="font-typewriter text-2xl font-bold mb-4">
+          Mas você não deveria estar aqui ainda...
         </p>
       </div>
 
