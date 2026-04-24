@@ -1,8 +1,4 @@
 import { Metadata } from 'next'
-import Header from '@/components/Header'
-import Footer from '@/components/Footer'
-import HomeClient from './HomeClient'
-import Link from 'next/link'
 
 export const metadata: Metadata = {
   title: "Era de Prata | Início - Jornada Artística Abstrata",
@@ -21,18 +17,4 @@ export const metadata: Metadata = {
       },
     ],
   },
-}
-
-export default function Home() {
-  return (
-    <div className="min-h-screen bg-black">
-      <Header />
-      
-      <main>
-        <HomeClient />
-      </main>
-      
-      <Footer />
-    </div>
-  )
 }

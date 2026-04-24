@@ -30,12 +30,35 @@ export default function Footer() {
               <p>São Paulo, Brasil</p>
             </div>
           </div>
+
         </div>
         
-        <div className="border-t border-silver-800 mt-8 pt-4 text-center">
-          <p className="text-silver-400">
-            © 2024 Eradeprata. Todos os direitos reservados.
-          </p>
+        <div className="border-t border-silver-800 mt-8 pt-4">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+            <p className="text-silver-400 text-center md:text-left">
+              © 2024 Eradeprata. Todos os direitos reservados.
+            </p>
+            <div className="flex items-center gap-4 text-sm">
+              <span className="text-silver-500">Desenvolvimento:</span>
+              <a 
+                href="https://portfolio3d-seven-alpha.vercel.app/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-silver-400 hover:text-white transition"
+              >
+                M Vitabar
+              </a>
+              <span className="text-silver-600">|</span>
+              <a 
+                href="https://www.instagram.com/polaris.studio.3d/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-silver-400 hover:text-white transition"
+              >
+                Polaris Studio
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     </footer>

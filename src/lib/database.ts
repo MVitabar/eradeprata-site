@@ -70,6 +70,8 @@ export async function getProducts() {
 }
 
 export async function getProduct(id: string) {
+  console.log('Buscando produto no Supabase com ID:', id)
+  
   const { data, error } = await supabase
     .from('products')
     .select(`
@@ -79,7 +81,17 @@ export async function getProduct(id: string) {
     .eq('id', id)
     .single()
   
-  if (error) throw error
+  if (error) {
+    console.error('Erro do Supabase:', error)
+    throw new Error(`Supabase error: ${error.message} (code: ${error.code})`)
+  }
+  
+  if (!data) {
+    console.error('Produto não encontrado no banco de dados')
+    throw new Error('Produto não encontrado no banco de dados')
+  }
+  
+  console.log('Produto encontrado:', data)
   return data as Product
 }
 

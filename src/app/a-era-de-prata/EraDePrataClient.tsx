@@ -292,7 +292,6 @@ export default function EraDePrataClient() {
         </section>
       </main>
       
-      <Footer />
     </div>
   )
 }
